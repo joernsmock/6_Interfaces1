@@ -102,7 +102,7 @@ fun main(args: Array<String>) {
     h1.sleep()
 
     var r1 = MyRoamable()
-    // 'r' is an instrance of Wolf() and of class 'Animal' inside of MyClass
+    // 'r' is an instance of Wolf() and of class 'Animal' inside of MyClass
     r1.r.roam("into the woods.") // possible, if 'r1' is of class Roamable
     r1.r.eat(r1.r.food) // only possible, if 'r1' is ???
     r1.r.makeNoise() // 'r' will howl, because 'Animal' is abstract and 'r' is a 'Wolf'
