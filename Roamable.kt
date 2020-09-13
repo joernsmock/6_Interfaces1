@@ -113,4 +113,8 @@ fun main(args: Array<String>) {
     // it is not ok to reach down to the 'r' to call its functions
     // maybe you should stay with the interface, that MyRoamable() provides.
     r2.myFunc()
+
+    var r3 = MyRoamable()
+    // just add this to play with github.
+    r2.myFunc()
 }
