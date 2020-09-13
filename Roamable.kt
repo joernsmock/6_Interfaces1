@@ -82,6 +82,7 @@ class MyRoamable {
     // because it might change between declare/create and the call later on.
 
     fun myFunc() {
+        println("MyRoamable.myFunc() ($this) being called.")
         if (r is Wolf) {
             r.eat(r.food)
         }
@@ -103,8 +104,13 @@ fun main(args: Array<String>) {
 
     var r1 = MyRoamable()
     // 'r' is an instance of Wolf() and of class 'Animal' inside of MyClass
-    r1.r.roam("into the woods.") // possible, if 'r1' is of class Roamable
-    r1.r.eat(r1.r.food) // only possible, if 'r1' is ???
+    r1.r.roam("into the woods.") // possible, if it is of class Roamable
+    r1.r.eat(r1.r.food) // only possible, if it is a ???
     r1.r.makeNoise() // 'r' will howl, because 'Animal' is abstract and 'r' is a 'Wolf'
-    r1.myFunc()
+
+    var r2 = MyRoamable()
+    // 'r' is an instance of Wolf() and of class 'Animal' inside of MyClass
+    // it is not ok to reach down to the 'r' to call its functions
+    // maybe you should stay with the interface, that MyRoamable() provides.
+    r2.myFunc()
 }
