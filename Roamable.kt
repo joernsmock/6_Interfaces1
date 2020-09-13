@@ -116,5 +116,5 @@ fun main(args: Array<String>) {
 
     var r3 = MyRoamable()
     // just add this to play with github.
-    r2.myFunc()
+    r3.myFunc()
 }
